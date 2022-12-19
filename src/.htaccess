@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule download/(.*)$ download.php?signature=$1 [B]
+RewriteRule zip/(.*)$ zip.php?signature=$1 [B]
+RewriteRule pic/(.*)$ pic.php?signature=$1 [B]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
